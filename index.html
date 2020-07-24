@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa-Bank</title>
+
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- self style -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <div id="login-area">
+    <h1 class="text-center">Welcome to Mostafa-Bank</h1> 
+    <div class="submit-area">
+        <h4>Login</h4>
+        <input class="form-control" type="text" placeholder="email">
+        <br>
+        <input type="password" class ="form-control" name="" id="" placeholder="password">
+        <br>
+        <button id='login' class="btn btn-success">Enter</button>
+    </div>
+   </div>
+
+    <div id="transaction-area">
+        <h1>Transaction Area</h1>
+    </div>
+
+   <script>
+       const loginBtn = document.getElementById('login'); // catch the document.getElementById and put it into the `loginBtn` variable
+       loginBtn.addEventListener("click", function(){   //set the even listner to the variable `loginBtn`
+           const loginArea = document.getElementById('login-area');//declare another variable named loginArea and catch the full box put it into the variable loginArea then set its function that disappear the whole box
+           loginArea.style.display = 'none';
+           const transactionArea = document.getElementById('transaction-area');
+           transactionArea.style.display = 'block';
+       })
+   </script>
+</body>
+</html>
